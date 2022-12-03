@@ -8,7 +8,8 @@ pipeline
     {
       steps
        {
-         mvn compile
+         echo 'compile'
+         # mvn compile
        }
     }
     
@@ -16,7 +17,8 @@ pipeline
     {
       steps
       {
-        mvn test
+        echo 'test'
+        # mvn test
       }
     }
     
@@ -24,7 +26,8 @@ pipeline
     {
       steps
       {
-        mvn package
+        echo 'package'
+        # mvn package
       }
     }
     
