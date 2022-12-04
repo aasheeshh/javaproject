@@ -1,12 +1,11 @@
 pipeline 
 {
-    
+    agent { jenkins-slave }
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "MAVEN_HOME"
     }
-    
-    node("jenkins-slave"){
+  
     
     stages 
     {
@@ -41,5 +40,5 @@ pipeline
         }
 
     }
-    }
+    
 }
