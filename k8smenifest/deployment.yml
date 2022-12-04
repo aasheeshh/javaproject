@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: abctechnology
-        image: abc:latest
+        image: aasheeshh/abctechnology:latest
         ports:
         - containerPort: 8080
 ---
