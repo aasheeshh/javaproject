@@ -1,5 +1,9 @@
 - hosts: localhost
   tasks:
+    - name: build project
+      command:
+        cmd: mvn clean install
+
     - name: Login into Dockerhub
       command:
         cmd: docker login -u="aasheeshh" -p="Aarvi19*@"
