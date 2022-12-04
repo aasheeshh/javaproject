@@ -13,5 +13,5 @@
         cmd: docker build -t aasheeshh/abctechnology:latest .
 
     - name:
-      command:
+      shell:
         cmd: kubectl apply -f ./k8smenifest/
