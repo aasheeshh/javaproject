@@ -15,11 +15,11 @@
         source: build
 
     - name: Create a Deployment by reading the definition 
-      k8s:
+      kubernetes.core.k8s:
         state: present
         src: ./k8smenifest/deployment.yml
 
     - name:
-      k8s:
+      kubernetes.core.k8s:
         state: present
         src: ./k8smenifest/service.yml
