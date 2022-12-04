@@ -20,7 +20,7 @@ pipeline
             steps {
 
                 sh "mvn -Dmaven.test.failure.ignore=true package"
-                sh "docker build -t tomcat:latest ."
+                sh "docker build -t abc:latest ."
 
             }
             post 
