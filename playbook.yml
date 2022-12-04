@@ -11,7 +11,13 @@
     - name:  Build an image and push it to a private repo
       command:
         cmd: docker build -t aasheeshh/abctechnology:latest .
-
+        
     - name:
       shell:
         cmd: kubectl 
+        register: out
+
+    - name: output
+      debug:
+        var: out
+        
