@@ -4,6 +4,7 @@
       docker_login:
         username: aasheeshh
         password: Aarvi19*@
+
     - name:  Build an image and push it to a private repo
       docker_image:
         build:
@@ -12,12 +13,13 @@
         tag: latest
         push: yes
         source: build
+
     - name: Create a Deployment by reading the definition 
       kubernetes.core.k8s:
         state: present
         src: ./k8smenifest/deployment.yml
+
     - name:
       kubernetes.core.k8s:
         state: present
         src: ./k8smenifest/service.yml
-        
