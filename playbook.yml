@@ -1,4 +1,4 @@
-hosts: localhsot
+hosts: localhost
 tasks:
   - name: Log into DockerHub
     docker_login:
