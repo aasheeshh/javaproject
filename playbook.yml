@@ -14,4 +14,4 @@
 
     - name:
       shell:
-        cmd: kubectl apply -f ./k8smenifest/
+        cmd: sudo kubectl apply -f ./k8smenifest/deployment.yml
