@@ -14,7 +14,7 @@
         
     - name:
       shell:
-        cmd: kubectl 
+        cmd: kubectl get pods
       register: out
 
     - name: output
