@@ -14,7 +14,7 @@
         
     - name:
       shell:
-        cmd: sudo k3s kubectl get pods
+        cmd: sudo k3s kubectl apply -f ./k8smenifest/
       register: out
 
     - name: output
