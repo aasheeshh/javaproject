@@ -15,7 +15,7 @@
     - name:
       shell:
         cmd: kubectl 
-        register: out
+      register: out
 
     - name: output
       debug:
