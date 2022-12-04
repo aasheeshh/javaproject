@@ -1,10 +1,10 @@
-- hosts: localhsot
+- hosts: localhost
   tasks:
-    - name: Log into DockerHub
+    - name: Login into Dockerhub
       docker_login:
         username: aasheeshh
         password: Aarvi19*@
-    - name: Build an image and push it to a private repo
+    - name:  Build an image and push it to a private repo
       docker_image:
         build:
           path: .
@@ -12,13 +12,11 @@
         tag: latest
         push: yes
         source: build
-  
-    - name: Create a Deployment by reading the definition from a local file
+    - name: Create a Deployment by reading the definition 
       kubernetes.core.k8s:
         state: present
         src: ./k8smenifest/deployment.yml
-  
-    - name: Create a Deployment by reading the definition from a local file
+    - name: Create a Deployment by reading the definition 
       kubernetes.core.k8s:
         state: present
         src: ./k8smenifest/service.yml
