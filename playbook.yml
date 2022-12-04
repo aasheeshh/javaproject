@@ -14,12 +14,6 @@
         push: yes
         source: build
 
-    - name: Create a Deployment by reading the definition 
-      kubernetes.core.k8s:
-        state: present
-        src: ./k8smenifest/deployment.yml
-
     - name:
-      kubernetes.core.k8s:
-        state: present
-        src: ./k8smenifest/service.yml
+      command:
+        cmd: 'kubectl apply -f ./k8smenifest/'
