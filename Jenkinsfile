@@ -17,7 +17,7 @@ pipeline
                 sh "mvn -Dmaven.test.failure.ignore=true test"
             }
         }
-        stage('Build') {
+        stage('Package') {
             steps {
 
                 sh "mvn -Dmaven.test.failure.ignore=true package"
